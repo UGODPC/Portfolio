@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -42,7 +44,7 @@
         </div>
       </div>
       <div class="hero-image reveal">
-        <div class="hero-shape"></div>
+        <img src="public/data.jfif" alt="Photo de profil UGO" class="hero-profile-image">
       </div>
     </div>
   </section>
@@ -56,7 +58,9 @@
           <div class="education-content">
             <h3>BUT INFORMATIQUE LANNION</h3>
             <p>2024 - 2027</p>
-            <p>Formation axée sur le développement logiciel, les bases de données, les réseaux et la gestion de projets, visant à former des professionnels polyvalents du numérique.</p>
+            <p>Formation axée sur le développement logiciel, les bases de données, les réseaux et la gestion de
+              projets,
+              visant à former des professionnels polyvalents du numérique.</p>
           </div>
         </div>
         <div class="education-card reveal">
@@ -87,7 +91,10 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
         <div class="project-card reveal" data-project="snake">
@@ -102,7 +109,11 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+
           </div>
         </div>
         <div class="project-card reveal" data-project="system">
@@ -129,7 +140,11 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+
           </div>
         </div>
         <div class="project-card reveal" data-project="java">
@@ -156,8 +171,13 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+
           </div>
+
         </div>
         <div class="project-card reveal" data-project="system">
           <div class="project-content">
@@ -189,13 +209,19 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+
           </div>
+
         </div>
         <div class="project-card reveal" data-project="bdd">
           <div class="project-content">
             <h3>Créer et Exploiter une base de données </h3>
-            <p>Avec nos compténces en sql et python , nous avons créer de a à z une base de données et après avoir intégrer des données à l'intérieur , nous les avons exploités grace à python .</p>
+            <p>Avec nos compténces en sql et python , nous avons créer de a à z une base de données et après avoir
+              intégrer des données à l'intérieur , nous les avons exploités grace à python .</p>
             <div class="project-skills">
               <div class="skill">
                 <span>SQL</span>
@@ -210,10 +236,14 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
+
           </div>
-      </div>
-      <div class="project-card reveal" data-project="video">
+        </div>
+        <div class="project-card reveal" data-project="video">
           <div class="project-content">
             <h3>Création d'une vidéo pour présenter plusieurs activités</h3>
             <p>En groupe de 4 , nous avons filmé et monter une vidéo.</p>
@@ -225,10 +255,13 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="project-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link text-blue-500 underline cursor-pointer text-lg"
+              onclick="handleProjectClick(event);">
+              Voir le projet <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
+        </div>
       </div>
-    </div>
   </section>
 
   <section id="competences" class="skills">
@@ -274,7 +307,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="skills-category reveal">
           <h3>Outils & Environnements</h3>
           <div class="skills-grid">
@@ -294,7 +327,67 @@
               <div class="skill-icon"><i class="fab fa-trello"></i></div>
               <span>Trello</span>
             </div>
-            
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3>Soft Skills</h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Réaliser un développement d'application</h4>
+                <p>Conception et développement d'applications informatiques en utilisant les bonnes pratiques de
+                  programmation</p>
+              </div>
+            </div>
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Optimiser des applications informatiques</h4>
+                <p>Amélioration des performances et de l'efficacité des systèmes et applications existants</p>
+              </div>
+            </div>
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Administrer des systèmes informatiques communicants complexes</h4>
+                <p>Gestion et maintenance de réseaux et systèmes informatiques interconnectés</p>
+              </div>
+            </div>
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Gérer des données de l'information</h4>
+                <p>Conception, organisation et exploitation de bases de données et systèmes d'information</p>
+              </div>
+            </div>
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Conduire un projet</h4>
+                <p>Planification, coordination et gestion de projets informatiques de A à Z</p>
+              </div>
+            </div>
+            <div class="soft-skill-item">
+              <div class="soft-skill-icon">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <div class="soft-skill-content">
+                <h4>Travailler dans une équipe informatique</h4>
+                <p>Collaboration efficace au sein d'équipes techniques et multidisciplinaires</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -339,5 +432,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+
 </body>
+
 </html>

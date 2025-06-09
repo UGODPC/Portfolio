@@ -108,3 +108,19 @@ window.addEventListener('scroll', () => {
   
   lastScrollTop = scrollTop;
 });
+document.querySelectorAll('.project-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // Empêche le href="#" de recharger la page
+    document.getElementById('side-menu').classList.add('active');
+    document.getElementById('side-menu').classList.remove('hidden');
+  });
+});
+
+document.getElementById('close-menu').addEventListener('click', function() {
+  document.getElementById('side-menu').classList.remove('active');
+});
+function handleProjectClick(e) {
+  e.preventDefault();
+  console.log("Projet cliqué !");
+  // Ici tu pourras ouvrir ton side menu
+}

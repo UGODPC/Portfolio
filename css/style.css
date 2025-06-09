@@ -225,35 +225,24 @@ nav {
   flex: 1;
   position: relative;
   max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-shape {
-  position: relative;
-  width: 100%;
+.hero-profile-image {
+  width: 350px;
   height: 350px;
-  background-color: var(--primary-color);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: var(--shadow-lg);
-  animation: morphing 15s ease-in-out infinite;
+  border: 8px solid white;
+  transition: transform var(--animation-timing) ease, box-shadow var(--animation-timing) ease;
 }
 
-@keyframes morphing {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-  }
-  100% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
+.hero-profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Section General Styling */
@@ -384,9 +373,11 @@ section {
 .project-card[data-project="java"]::before {
   background-color: #3B82F6;
 }
+
 .project-card[data-project="bdd"]::before {
   background-color: purple;
 }
+
 .project-card[data-project="video"]::before {
   background-color: red;
 }
@@ -459,9 +450,11 @@ section {
 .project-card[data-project="bdd"] .skill-progress {
   background-color: purple
 }
+
 .project-card[data-project="video"] .skill-progress {
   background-color: red
 }
+
 .project-link {
   display: inline-block;
   color: var(--primary-color);
@@ -539,6 +532,56 @@ section {
 
 .skill-item span {
   font-weight: 500;
+}
+
+/* Soft Skills Section */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.soft-skill-item {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 3);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: calc(var(--spacing-unit) * 2);
+  transition: transform var(--animation-timing) ease, box-shadow var(--animation-timing) ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.soft-skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.soft-skill-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.soft-skill-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+.soft-skill-content p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* Contact Section */
@@ -683,6 +726,10 @@ footer .container {
   .contact-container {
     grid-template-columns: 1fr;
   }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -740,6 +787,20 @@ footer .container {
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+
+  .soft-skill-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .soft-skill-content {
+    text-align: center;
+  }
+
+  .hero-profile-image {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -768,4 +829,36 @@ footer .container {
     flex-direction: column;
     gap: calc(var(--spacing-unit) * 3);
   }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-profile-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  z-index: 1000;
+}
+
+.side-menu.active {
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
 }
